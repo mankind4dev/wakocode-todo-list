@@ -17,11 +17,11 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 820px;
-  height: 850px;
+  height: 750px;
 }
 .contain{
   overflow-y: auto;
-  height: 700px;
+  height: 600px;
 }
 
 h2 {
