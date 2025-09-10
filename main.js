@@ -2,7 +2,6 @@ const newTaskInput = document.getElementById("new-task");
 const addButton = document.getElementById("add-btn");
 const taskList = document.getElementById("task-list");
 
-// Load tasks from localStorage on page load
 window.addEventListener("DOMContentLoaded", () => {
   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
   savedTasks.forEach((task) => addTaskToDOM(task));
@@ -14,7 +13,6 @@ addButton.addEventListener("click", () => {
 
   addTaskToDOM(newText);
 
-  // Save to localStorage
   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
   savedTasks.push(newText);
   localStorage.setItem("tasks", JSON.stringify(savedTasks));
@@ -36,7 +34,6 @@ function addTaskToDOM(task) {
   taskItem.appendChild(deleteBtn);
   taskList.prepend(taskItem);
 
-  // remove task on delete icon click
   deleteBtn.addEventListener("click", () => {
     taskItem.remove();
 
